@@ -284,3 +284,14 @@ if result != -1:
     print(f"element found at index {result}")
 else:
   print(f"element not found")
+#m,n range cubes sum
+m=int(input())
+n=int(input())
+total=0
+if (m>n):
+  print(0)
+else :
+  for i in range(m,n+1) :
+    total+=i**3
+  print(total)
+#
