@@ -141,4 +141,146 @@ if (a%5==0 and a%11==0):
     print("the number is divisible by 5 and 11")
 else:
     print("the number is not dividible")    
+    #age
+age=int(input("enter:"))
+if(age<13):
+  print("child")
+elif(age>13 and age <=19):
+  print("teenage")
+else:
+  print("adult")
+    #grading
+m=int(input("enter marks"))
+if m>=90:
+  print("grade is A excellent")
+elif (m>=70 and m<90):
+  print("grade is B nice")
+elif (m>=50 and m<70):
+  print("grade is C average")
+elif(m>=40 and m<50):
+  print("grade is D below average")
+else:
+  print("fail")
+#days(1-7)
+a = int(input("choose a number (1-7):"))
+if a==1:
+  print("sunday")
+elif a==2:
+  print("monday")
+elif a==3:
+  print("tuesday")
+elif a==4:
+  print("wednesday")
+elif a==5:
+  print("thursday")
+elif a==6:
+  print("friday")
+elif a==7:
+  print("saturday")
+else:
+  print("invalid input")
+    #check user name and possword
+username = "bunny"
+psd = 6457
 
+while True:
+    user = input("enter username: ")
+    if username == user:
+        break
+    else:
+        print("Incorrect username. Please try again.")
+
+while True:
+    possword = int(input("enter password: "))
+    if psd == possword:
+        break
+    else:
+        print("Incorrect password. Please try again.")
+
+print("login success")
+#calculator
+a=int(input("enter a number"))
+b=int(input("enter a number"))
+cal=int(input("enter 1 for add,2 for sub,3 for mul,4 for div"))
+if cal==1:
+  print(a+b)
+elif cal==2:
+  print(a-b)
+elif cal==3:
+  print(a*b)
+elif cal==4:
+  print(a/b)
+else:
+  print("invalid choice")
+#body temperature
+temp=float(input("enter body temperature"))
+if temp==98.6:
+  print("normal")
+elif temp<98.6:
+  print("cold")
+else:
+  print("fever")
+#n is multiply by 10
+n=int(input("enter a number"))
+s=n%10
+print(s)
+m=int(input())
+n=int(input())
+total=0
+if (m>n):
+  print(0)
+else :
+  for i in range(m,n+1) :
+    total+=i**3
+  print(total)
+#student pass in theory,practicals and toatal
+a=int(input("enter theory marks"))
+b=int(input("enter practical marks"))
+c=int(input("enter total marks"))
+if(a>=35 and b>=15 or c>=60):
+  print("pass")
+else:
+  print("fail")
+
+#atm access
+cardinserted=True
+correct_pin="2324"
+enteredpin=input("enter pin")
+accountblocked=False
+if (cardinserted and not accountblocked and enteredpin==correct_pin):
+  print("access granted")
+else:
+  print("access denied")
+#binary search
+def binary_search(arr,target):
+    low=0
+    high=len(arr)-1
+    while low<=high:
+        mid=(low+high)//2
+        if arr[mid]==target:
+            return mid
+        elif arr[mid]<target:
+            low=mid+1
+        else:
+            high=mid-1  
+    return -1
+arr=[1,2,3,4,5]
+target=3
+result=binary_search(arr,target)
+if result != -1:
+    print(f"element found at index {result}")
+else:
+  print(f"element not found")               
+#linear search
+def linear_search(arr,target):
+    for i in range(len(arr)):
+        if arr[i]==target:
+            return i
+    return -1
+arr=[1,2,3,4,54,6,4,885]
+target=4
+result=linear_search(arr,target)
+if result != -1:
+    print(f"element found at index {result}")
+else:
+  print(f"element not found")
